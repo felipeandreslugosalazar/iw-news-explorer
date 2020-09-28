@@ -1,0 +1,12 @@
+<div class="feed-loading-layer" *ngIf="isLoadingFeed$ | async">
+  <fa-icon class="feed-loading-icon"
+    [icon]="feedLoadingIcon"
+    [spin]="true"
+  ></fa-icon> The explorer is loading your news feed parameters.
+</div>
+
+<app-feed-header (reset)="onReset()"></app-feed-header>
+
+<app-feed-builder></app-feed-builder>
+
+<app-feed-articles *ngIf="newsResult$ | async as result"></app-feed-articles>

@@ -1,0 +1,11 @@
+<div class="app-loading-layer" *ngIf="isLoading$ | async; else loadedTemplate">
+  <fa-icon class="app-loading-icon"
+    [icon]="explorerLoadingIcon"
+  ></fa-icon> The explorer shuttle is starting
+</div>
+
+<ng-template #loadedTemplate>
+  
+  <app-menu></app-menu>
+  <router-outlet></router-outlet>
+</ng-template>

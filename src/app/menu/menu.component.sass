@@ -1,0 +1,40 @@
+
+\:host
+  background-color: rgb(39, 39, 39)
+  color: rgb(135, 135, 135)
+  display: block
+  height: 100%
+  width: 200px
+  overflow: auto
+  flex: 0 0 auto
+  padding: 20px 0
+
+.menu-title
+  margin: 0 0 20px 0
+  padding: 0 10px
+  color: white
+
+ol
+  list-style: none
+  margin: 0
+  padding: 0
+
+li
+  margin: 0
+  padding: 0 10px
+  line-height: 50px
+  height: 50px
+  display: block
+  width: 100%
+  overflow: hidden
+  text-overflow: ellipsis
+  cursor: pointer
+  outline: none
+  color: darkgrey
+
+  &:not(.active):hover
+    color: rgb(255, 187, 3)
+
+li.active
+  color: rgb(255, 187, 3)
+  text-decoration: underline
